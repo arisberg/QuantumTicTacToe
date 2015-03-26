@@ -1,0 +1,15 @@
+.container {
+	height:606px;
+	width:606px;
+	border: solid black 1px;
+	margin: auto;
+}
+
+.space {
+	float:left;
+	height:200px;
+	width:200px;
+	border: solid black 1px;
+	text-align: center;
+	font-size: 3em;
+}
