@@ -1,34 +1,85 @@
+
+.title {
+	text-align: center;
+	font-size: 3.5em;
+	margin:0px;
+}
+
+.wrapper {
+	font-family: 'Orbitron', sans-serif;
+}
+
 .container {
-	height:455px;
+	height:500px;
 	width:456px;
 	border: solid black 1px;
-	margin: auto;
+	margin-left: 4%;
 	float:left;
+	background-image: url('images/orbs.jpg')
 }
 
 .space {
 	float:left;
 	height:150px;
 	width:150px;
-	border: solid black 1px;
+	border: solid white 1px;
 	text-align: center;
 	font-size: 3em;
+	color: white;
 }
 
 .button {
-
+	border-radius: 55px;
+	height:50px;
+	width:50px;
+	background-image: url('images/atom.png');
+	border:solid black 2px;
+	margin: auto;
 }
 
-.xboard {
-	height:500px;
-	width: 300px;
-	border:solid black 2px;
-	float:left;
+.button_used {
+	background-image: url('images/atom_used.png');
 }
 
-.oboard {
-	height:500px;
-	width: 300px;
-	border:solid black 2px;
+.winner_statement {
+	height:50px;
+	width:500px;
+	margin-left: 31%;
+	text-align: center;
+}
+
+.reset {
+	background-color: black;
+	width: 436px;
+	height: 25px;
+	margin-left: auto 0;
+	font-size: 2em;
+	font-family: 'Orbitron', sans-serif;
+	color:white;
+	padding: 10px;
 	float:left;
+	text-align: center;
+}
+
+.board {
+	height:200px;
+	width: 300px;
+	border: solid white 5px;
+	float:left;
+	text-align: center;
+	margin-left:4%;
+	margin-top:7%;
+	padding-top:5%;
+}
+
+
+
+.board_on {
+	border: inset 5px;
+}
+
+.playername {
+	border-bottom: solid black 2px;
+	width: 50px;
+	margin:auto;
 }

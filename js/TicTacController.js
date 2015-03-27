@@ -19,7 +19,7 @@
 			self.xHasQuantum = true;
 			self.oHasQuantum = true;
 			self.gameOver = false;
-			self.winnerStatement= "";
+			self.winnerStatement= "Constant Flux";
 			self.reset = reset;
 			self.moves = 0;
 			self.boxes = [
@@ -152,10 +152,12 @@
 				for (var i = 0 ; i < self.boxes.length ; i++) {
 					self.boxes[i].state = null;
 				}
-				self.winnerStatement = "";
+				self.winnerStatement = "Random Behaviors";
 				self.moves = 0;
 				self.playerOneTurn = true;
 				self.gameOver= false;
+				self.xHasQuantum = true;
+				self.oHasQuantum = true;
 			}
 
 			function xQuantum() {
