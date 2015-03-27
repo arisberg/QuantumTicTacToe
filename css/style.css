@@ -1,15 +1,34 @@
 .container {
-	height:606px;
-	width:606px;
+	height:455px;
+	width:456px;
 	border: solid black 1px;
 	margin: auto;
+	float:left;
 }
 
 .space {
 	float:left;
-	height:200px;
-	width:200px;
+	height:150px;
+	width:150px;
 	border: solid black 1px;
 	text-align: center;
 	font-size: 3em;
+}
+
+.button {
+
+}
+
+.xboard {
+	height:500px;
+	width: 300px;
+	border:solid black 2px;
+	float:left;
+}
+
+.oboard {
+	height:500px;
+	width: 300px;
+	border:solid black 2px;
+	float:left;
 }
