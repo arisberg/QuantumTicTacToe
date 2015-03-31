@@ -2,7 +2,7 @@
 (function(){
 
 	//declare module
-	angular.module('TicTacToe', []);
+	angular.module('TicTacToe', ['firebase']);
 
 
 })();

@@ -1,12 +1,18 @@
+body {
+	background-color: black;
+	color: white;
+}
 
 .title {
 	text-align: center;
 	font-size: 3.5em;
 	margin:0px;
+	text-shadow: 2px 2px 8px #8AEBE1;
 }
 
 .wrapper {
 	font-family: 'Orbitron', sans-serif;
+	color: white;
 }
 
 .container {
@@ -15,7 +21,12 @@
 	border: solid black 1px;
 	margin-left: 4%;
 	float:left;
-	background-image: url('images/orbs.jpg')
+	background-image: url('images/bluebackground.jpg');
+}
+
+.container_spin {
+	transition: 1s;
+	transform : rotate(-720deg);
 }
 
 .space {
@@ -46,6 +57,12 @@
 	width:500px;
 	margin-left: 31%;
 	text-align: center;
+	color:black;
+}
+
+.winner_statement_end {
+	transition: 2s;
+	color:white;
 }
 
 .reset {
@@ -64,7 +81,7 @@
 .board {
 	height:200px;
 	width: 300px;
-	border: solid white 5px;
+	border: solid black 5px;
 	float:left;
 	text-align: center;
 	margin-left:4%;
@@ -75,11 +92,13 @@
 
 
 .board_on {
-	border: inset 5px;
+	text-shadow: 2px 2px 8px #8AEBE1;
+	border-bottom:solid white 10px;
+	box-shadow: 0px 10px 0px #8AEBE1;
 }
 
 .playername {
-	border-bottom: solid black 2px;
+	border-bottom: solid white 2px;
 	width: 50px;
 	margin:auto;
 }
