@@ -12,33 +12,54 @@
     <script src="js/app.js"></script>
     <!-- Controllers -->
     <script src="js/TicTacController.js"></script>
+    <!-- Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
-	<link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
 
 </head>
-<body ng-app="TicTacToe">
+    <!-- Init App -->
+    <body ng-app="TicTacToe">
 
-<div class = "wrapper" ng-controller="TicTacController as tictac">
-<h1 class="title">Quantum Tic Tac Toe</h1>
-	<div class = "winner_statement" ng-class="{winner_statement_end : tictac.gameOver}"><h1>{{tictac.winnerStatement}}</h1></div>
+        <!-- Init Controller -->
+        <div class = "wrapper" ng-controller="TicTacController as tictac">
+              <!-- Main Title -->
+            <h1 class="title">Quantum Tic Tac Toe</h1>
 
-	<div class="board" ng-class="{board_on : tictac.playerOneTurn}">
-		<h1 class="playername">X</h1>
-		<h2>{{tictac.playerOneScore}}</h2>
-		<div class="button" ng-click="tictac.xQuantum()" ng-class = "{button_used : !tictac.xHasQuantum}"></div>
-	</div>
-	<div class="container">
-		<div class="space" ng-repeat="box in tictac.boxes" ng-click="tictac.addMove(box)" ng-class= "{container_spin : tictac.quantumUsed}">
-			<div><h2>{{box.state}}</h2></div>
+            <!-- Displays who wins the game -->
+
+            <!-- Left side div.  X scoreboard.  When playerOneTurn = true, displays board_on class -->
+      	<div class="board" ng-class="{board_on : tictac.game.stats.playerOneTurn}">
+		    <!-- Displays X -->
+                <h1 class="playername">X</h1>
+                <!-- Displays X's score -->
+		    <h2>{{tictac.game.stats.playerOneScore}}</h2>
+                <!-- Quantum button for X -->
+	           <div class="button" ng-click="tictac.xQuantum()" ng-class = "{button_used : !tictac.game.stats.xHasQuantum}"></div>
+            </div>
+
+      <!-- Game board -->
+	<div class="container" ng-class= "{container_spin : tictac.game.stats.quantumUsed}">
+            <!-- Div for one space on gameboard.  Repeated as many times as are objects in firebase array.
+                   On click, calss addMove() with the clicked box as a perameter.
+                   Spins the divs when quantumUsed = true
+             -->
+		<div class="space" ng-repeat="box in tictac.game.squares" ng-click="tictac.addMove(box)">
+		    <!-- Displays the box's state a.k.a. X, O, or blank -->
+                <div><h2>{{box.state}}</h2></div>
 		</div>
+
+            <!-- Reset button, calls reset()-->
 		<div class="reset" ng-click="tictac.reset()">Reset</div>
 	</div>
 
-	<div class="board" ng-class="{board_on : !tictac.playerOneTurn}">
+      <!-- O scoreboard. Same functionalities as X scoreboard -->
+	<div class="board" ng-class="{board_on : !tictac.game.stats.playerOneTurn}">
 		<h1 class="playername">O</h1>
-		<h2>{{tictac.playerTwoScore}}</h2>
-		<div class="button" ng-click="tictac.oQuantum()" ng-class = "{button_used : !tictac.oHasQuantum}"></div>
+		<h2>{{tictac.game.stats.playerTwoScore}}</h2>
+		<div class="button" ng-click="tictac.oQuantum()" ng-class = "{button_used : !tictac.game.stats.oHasQuantum}"></div>
 	</div>
+
 </div>
 </body>
 </html>

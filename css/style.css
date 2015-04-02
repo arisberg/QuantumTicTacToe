@@ -3,15 +3,22 @@ body {
 	color: white;
 }
 
+@font-face {
+	font-family: space;
+	src: url(cubic/cubic.ttf);
+
+}
+
 .title {
 	text-align: center;
-	font-size: 3.5em;
-	margin:0px;
+	font-size: 3em;
+
 	text-shadow: 2px 2px 8px #8AEBE1;
+	padding:20px;
 }
 
 .wrapper {
-	font-family: 'Orbitron', sans-serif;
+	font-family: space;
 	color: white;
 }
 
@@ -26,7 +33,7 @@ body {
 
 .container_spin {
 	transition: 1s;
-	transform : rotate(-720deg);
+	transform : rotate(720deg);
 }
 
 .space {
@@ -71,7 +78,7 @@ body {
 	height: 25px;
 	margin-left: auto 0;
 	font-size: 2em;
-	font-family: 'Orbitron', sans-serif;
+	font-family: space;
 	color:white;
 	padding: 10px;
 	float:left;
@@ -85,7 +92,7 @@ body {
 	float:left;
 	text-align: center;
 	margin-left:4%;
-	margin-top:7%;
+	margin-top:5%;
 	padding-top:5%;
 }
 
