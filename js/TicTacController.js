@@ -20,7 +20,7 @@ function TicTacController($scope, $firebaseObject, $firebaseArray) {
 	self.reset = reset;
 	var ref = new Firebase("https://quantumttt.firebaseio.com/game");
 	self.game = $firebaseObject(ref);
-	console.log(self.game);
+
 
 
 

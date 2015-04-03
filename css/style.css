@@ -3,13 +3,12 @@ body {
 	color: white;
 	background-position: 0px 0px;
 	background-repeat: repeat-x;
-	animation: stars 40s linear infinite;
-	-webkit-animation: stars 40s linear infinite;
+	animation: stars 60s linear infinite;
+	-webkit-animation: stars 60s linear infinite;
 
 }
 
 @keyframes stars{
-
 	to{background-position: 100%;}
 }
 
@@ -43,28 +42,31 @@ body {
 
 .container {
 	border-radius: 25px;
-	height:500px;
-	width:456px;
-	border: solid black 1px;
+	height:510px;
+	width:465px;
 	margin-left: 4%;
 	float:left;
-	background-image: url('images/spiral.jpg');
+	background-color: clear;
 }
 
 .container_spin {
-	transition: 1s;
-	transform : rotate(720deg);
+	transition: 2s;
+	transform: rotate(720deg);
 }
 
 .space {
 	float:left;
 	height:150px;
 	width:150px;
-	border: solid white 1px;
+	border: solid white 2px;
 	text-align: center;
 	font-size: 3em;
 	color: white;
 	border-radius: 25px;
+}
+
+.space:hover {
+	border: solid #8AEBE1 2px;
 }
 
 .button {
@@ -91,7 +93,7 @@ body {
 	border: solid white 5px;
 	position: absolute;
 	top:260px;
-	font-size: 3em;
+	font-size: 2em;
 }
 
 .winner_statement_end {
