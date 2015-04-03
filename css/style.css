@@ -1,12 +1,31 @@
 body {
-	background-color: black;
+	background-image: url('http://static.tumblr.com/baefb3fdb1b9097ddadd906bb6a2a1d1/mqbtw2u/D7lnepbzh/tumblr_static_4qd8hjgcif0gs40o88cws4g44.jpg');
 	color: white;
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+	animation: stars 40s linear infinite;
+	-webkit-animation: stars 40s linear infinite;
+
+}
+
+@keyframes stars{
+
+	to{background-position: 100%;}
+}
+
+@-webkit-keyframes stars{
+	to{background-position: 100%;}
 }
 
 @font-face {
 	font-family: space;
 	src: url(cubic/cubic.ttf);
 
+}
+
+@font-face{
+	font-family:numbers;
+	src:url('birdman/BIRDMAN_.ttf');
 }
 
 .title {
@@ -23,12 +42,13 @@ body {
 }
 
 .container {
+	border-radius: 25px;
 	height:500px;
 	width:456px;
 	border: solid black 1px;
 	margin-left: 4%;
 	float:left;
-	background-image: url('images/bluebackground.jpg');
+	background-image: url('images/spiral.jpg');
 }
 
 .container_spin {
@@ -44,6 +64,7 @@ body {
 	text-align: center;
 	font-size: 3em;
 	color: white;
+	border-radius: 25px;
 }
 
 .button {
@@ -60,11 +81,17 @@ body {
 }
 
 .winner_statement {
-	height:50px;
-	width:500px;
-	margin-left: 31%;
+	height:240px;
+	width:550px;
+	margin-left: 27%;
 	text-align: center;
 	color:black;
+	background-color:white;
+	opacity: 0.7;
+	border: solid white 5px;
+	position: absolute;
+	top:260px;
+	font-size: 3em;
 }
 
 .winner_statement_end {
@@ -73,7 +100,7 @@ body {
 }
 
 .reset {
-	background-color: black;
+	background-color: clear;
 	width: 436px;
 	height: 25px;
 	margin-left: auto 0;
@@ -88,12 +115,13 @@ body {
 .board {
 	height:200px;
 	width: 300px;
-	border: solid black 5px;
+	border: solid clear 5px;
 	float:left;
 	text-align: center;
 	margin-left:4%;
 	margin-top:5%;
 	padding-top:5%;
+	font-family:numbers;
 }
 
 
@@ -101,7 +129,7 @@ body {
 .board_on {
 	text-shadow: 2px 2px 8px #8AEBE1;
 	border-bottom:solid white 10px;
-	box-shadow: 0px 10px 0px #8AEBE1;
+
 }
 
 .playername {

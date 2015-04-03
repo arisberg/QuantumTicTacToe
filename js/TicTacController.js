@@ -169,7 +169,7 @@ function TicTacController($scope, $firebaseObject, $firebaseArray) {
 			console.log(cells);
 			cells = shuffle(cells);
 			console.log(cells);
-			for (var i = 0 ;  i < self.game.squares.length ; i++){
+			for (i = 0 ;  i < self.game.squares.length ; i++){
 				self.game.squares[i].state = cells[i];
 			}
 			self.game.stats.xHasQuantum = false;
@@ -189,7 +189,7 @@ function TicTacController($scope, $firebaseObject, $firebaseArray) {
 			console.log(cells);
 			cells = shuffle(cells);
 			console.log(cells);
-			for (var i = 0 ;  i <  self.game.squares.length ; i++){
+			for (i = 0 ;  i <  self.game.squares.length ; i++){
 				self.game.squares[i].state = cells[i];
 			}
 			self.game.stats.oHasQuantum = false;
