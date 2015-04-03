@@ -7,10 +7,10 @@ angular
 	.controller('TicTacController', TicTacController);
 
 // injects scope, firebaseObject and firebaseArray
-TicTacController.$inject = ['$scope', '$firebaseObject', '$firebaseArray'];
+TicTacController.$inject = ['$firebaseObject', '$firebaseArray'];
 
 // main controller
-function TicTacController($scope, $firebaseObject, $firebaseArray) {
+function TicTacController($firebaseObject, $firebaseArray) {
 	//Capture variable
 	var self = this;
 	self.checkWinner = checkWinner;
@@ -22,8 +22,6 @@ function TicTacController($scope, $firebaseObject, $firebaseArray) {
 	self.game = $firebaseObject(ref);
 
 
-
-
 	// Called when a box on the board is clicked.
 	// If the game is not over, checks to see if it is playerOne's turn.
 	// If so, and the box being clicked is currently set to null,
@@ -33,6 +31,8 @@ function TicTacController($scope, $firebaseObject, $firebaseArray) {
 	// then makes the playerOneTurn variable equal to true.
 	// Incriments moves by 1.
 	// Calls checkWinner() to see if the move created a win condition
+
+
 	function addMove(clickedBox) {
 		if (self.game.stats.gameOver === false) {
 			if(self.game.stats.playerOneTurn===true && clickedBox.state === "") {
@@ -130,7 +130,9 @@ function TicTacController($scope, $firebaseObject, $firebaseArray) {
 			self.game.stats.playerTwoScore += 1;
 		}
 		self.game.stats.gameOver = true;
+		self.game.$save();
 	}
+
 
 	// loops through boxes and sets the state of each element of the
 	// array to null, a.k.a. clears the game board.
@@ -174,9 +176,9 @@ function TicTacController($scope, $firebaseObject, $firebaseArray) {
 			}
 			self.game.stats.xHasQuantum = false;
 			self.game.stats.quantumUsed = true;
+			checkWinner();
 			self.game.$save();
 		}
-		checkWinner();
 	}
 
 	// Same as xQuantum but for O
@@ -194,9 +196,9 @@ function TicTacController($scope, $firebaseObject, $firebaseArray) {
 			}
 			self.game.stats.oHasQuantum = false;
 			self.game.stats.quantumUsed = true;
+			checkWinner();
 			self.game.$save();
 		}
-		checkWinner();
 	}
 
 	// Shuffles an array, in this case cells

@@ -35,7 +35,7 @@
                 <!-- Quantum button for X -->
 	           <div class="button" ng-click="tictac.xQuantum()" ng-class = "{button_used : !tictac.game.stats.xHasQuantum}"></div>
             </div>
-        <div class = "winner_statement" ng-show="tictac.game.stats.gameOver"><h1>{{tictac.game.stats.winnerStatement}}</h1></div>
+        <div class = "winner_statement" ng-click="tictac.reset()" ng-show="tictac.game.stats.gameOver"><h1>{{tictac.game.stats.winnerStatement}}</h1></div>
       <!-- Game board -->
 	<div class="container" ng-class= "{container_spin : tictac.game.stats.quantumUsed}">
             <!-- Div for one space on gameboard.  Repeated as many times as are objects in firebase array.
