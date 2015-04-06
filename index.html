@@ -23,6 +23,9 @@
         <div class = "wrapper" ng-controller="TicTacController as tictac">
               <!-- Main Title -->
             <h1 class="title">Quantum Tic Tac Toe</h1>
+            <audio autoplay=true loop=true>
+                <source src="css/quantum.mp3" type="audio/mpeg">
+            </audio>
 
             <!-- Displays who wins the game -->
 
@@ -57,6 +60,7 @@
 		<h2>{{tictac.game.stats.playerTwoScore}}</h2>
 		<div class="button" ng-click="tictac.oQuantum()" ng-class = "{button_used : !tictac.game.stats.oHasQuantum}"></div>
 	</div>
+
 
 </div>
 </body>

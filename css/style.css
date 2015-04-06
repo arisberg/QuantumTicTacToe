@@ -50,7 +50,7 @@ body {
 }
 
 .container_spin {
-	transition: 2s;
+	transition: 1s;
 	transform: rotate(720deg);
 }
 
@@ -89,7 +89,7 @@ body {
 	text-align: center;
 	color:black;
 	background-color:white;
-	opacity: 0.7;
+	opacity: 0.9;
 	border: solid white 5px;
 	position: absolute;
 	padding-top:50px;

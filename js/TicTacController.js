@@ -21,7 +21,6 @@ function TicTacController($firebaseObject, $firebaseArray) {
 	var ref = new Firebase("https://quantumttt.firebaseio.com/game");
 	self.game = $firebaseObject(ref);
 
-
 	// Called when a box on the board is clicked.
 	// If the game is not over, checks to see if it is playerOne's turn.
 	// If so, and the box being clicked is currently set to null,
@@ -31,6 +30,7 @@ function TicTacController($firebaseObject, $firebaseArray) {
 	// then makes the playerOneTurn variable equal to true.
 	// Incriments moves by 1.
 	// Calls checkWinner() to see if the move created a win condition
+
 
 
 	function addMove(clickedBox) {
@@ -203,21 +203,15 @@ function TicTacController($firebaseObject, $firebaseArray) {
 
 	// Shuffles an array, in this case cells
 	function shuffle(array) {
-			var m = array.length, t, i;
+		var m = array.length, t, i;
+		while (m) {
+			i = Math.floor(Math.random() * m--);
 
-			 // While there remain elements to shuffle…
-				 while (m) {
-
-		    // Pick a remaining element…
-				 i = Math.floor(Math.random() * m--);
-
-		    // And swap it with the current element.
-		      t = array[m];
-			  array[m] = array[i];
-			  array[i] = t;
-			}
-
-					 return array;
+			t = array[m];
+			array[m] = array[i];
+			array[i] = t;
+		}
+		return array;
 	}
 
 }
